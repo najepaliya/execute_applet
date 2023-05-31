@@ -7,9 +7,9 @@
 - configurable run and busy panel icons
 - configurable command to execute
 - configurable invoking global shortcut
+- stop a running process
 
 # limitations (potentially due to Plasma's APIs)
-- stopping running commands
 - global shortcut invocation focuses the applet
 
 # examples
