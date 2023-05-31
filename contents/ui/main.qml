@@ -49,7 +49,7 @@ Item {
         }
         onClicked: {
             widget.busy = true;
-            executable.exec ("sleep 2s")
+            executable.exec (plasmoid.configuration.command)
         }
     }
 }

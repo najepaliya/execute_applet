@@ -9,6 +9,7 @@
         "Category": "Application Launchers",
         "Description": "An applet to configure and run an executable",
         "Id": "com.github.najepaliya.execute",
+        "Icon": "run-build",
         "Name": "Execute",
         "Version": "0.1",
         "Website": "https://github.com/najepaliya/execute_applet"

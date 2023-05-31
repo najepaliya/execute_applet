@@ -8,5 +8,8 @@
         <entry name="stopIcon" type="string">
             <default>process-stop</default>
         </entry>
+        <entry name="command" type="string">
+            <default>sleep 2s</default>
+        </entry>
     </group>
 </kcfg>
