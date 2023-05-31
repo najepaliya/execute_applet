@@ -1,0 +1,19 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "najepaliya@gmail.com",
+                "Name": "Neel Jepaliya"
+            }
+        ],
+        "Category": "Application Launchers",
+        "Description": "An applet to configure and run an executable",
+        "Id": "com.github.najepaliya.execute_applet",
+        "Name": "Execute",
+        "Version": "0.1",
+        "Website": "https://github.com/najepaliya/execute_applet"
+    },
+    "X-Plasma-API": "declarativeappletscript",
+    "X-Plasma-MainScript": "ui/main.qml",
+    "KPackageStructure": "Plasma/Applet"
+}
