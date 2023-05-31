@@ -5,7 +5,7 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras // Representation
 Item {
     // Default compact view
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
-    Plasmoid.icon: "run-build"
+    Plasmoid.icon: plasmoid.configuration.runIcon
 
     // Expanded view
     Plasmoid.fullRepresentation: PlasmaExtras.Representation {
