@@ -7,9 +7,8 @@ Item {
     id: widget
     property bool busy: false 
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
-    // Plasmoid.fullRepresentation: null
     Plasmoid.icon: busy ? plasmoid.configuration.busyIcon : plasmoid.configuration.runIcon
-    Plasmoid.onActivated: execCommand ()
+    Plasmoid.onActivated: busy ? executable.quit() : executable.exec()
 
     PlasmaCore.DataSource {
 		id: executable
@@ -22,36 +21,26 @@ Item {
 			var stderr = data["stderr"]
 			exited(sourceName, exitCode, exitStatus, stdout, stderr)
 			disconnectSource(sourceName) // cmd finished
+            widget.busy = false
 		}
-		function exec(cmd) {
-			if (cmd) {
-				connectSource(cmd)
-			}
+		function exec () {
+            connectSource(plasmoid.configuration.command)
+            widget.busy = true
 		}
+        function quit () {
+            disconnectSource(plasmoid.configuration.command)
+            widget.busy = false
+        }
 		signal exited(string cmd, int exitCode, int exitStatus, string stdout, string stderr)
 	}
 
-    Connections {
-        target: executable
-        function onExited () {
-            widget.busy = false
-        }
-    }
-
     Plasmoid.compactRepresentation: MouseArea {
-        id: ma
         PlasmaCore.IconItem {
             id: buttonIcon
             height: parent.height
             width: parent.height
             source: plasmoid.icon
         }
-        onClicked: {
-            execCommand()
-        }
-    }
-    function execCommand () {
-        widget.busy = true;
-        executable.exec (plasmoid.configuration.command)
+        onClicked: busy ? executable.quit() : executable.exec()
     }
 }

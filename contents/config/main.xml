@@ -9,7 +9,7 @@
             <default>process-stop</default>
         </entry>
         <entry name="command" type="string">
-            <default>sleep 2s</default>
+            <default>sleep 10s</default>
         </entry>
     </group>
 </kcfg>
