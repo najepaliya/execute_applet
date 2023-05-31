@@ -1,5 +1,6 @@
 # execute_applet
 - an applet to execute a configurable command
+![configuration](https://github.com/najepaliya/execute_applet/assets/133005733/69602a16-46fe-4c75-8a1d-c83998c17c70)
 
 # features
 - configurable run and busy panel icons
