@@ -6,7 +6,7 @@
             <default>run-build</default>
         </entry>
         <entry name="stopIcon" type="string">
-            <default>run-build</default>
+            <default>process-stop</default>
         </entry>
     </group>
 </kcfg>
