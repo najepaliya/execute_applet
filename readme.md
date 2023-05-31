@@ -8,7 +8,7 @@
 - configurable command to execute
 - configurable invoking global shortcut
 
-# limitations (due to Plasma's APIs)
+# limitations (potentially due to Plasma's APIs)
 - stopping running commands
 - global shortcut invocation focuses the applet
 
