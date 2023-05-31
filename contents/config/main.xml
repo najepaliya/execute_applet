@@ -5,7 +5,7 @@
         <entry name="runIcon" type="string">
             <default>run-build</default>
         </entry>
-        <entry name="stopIcon" type="string">
+        <entry name="busyIcon" type="string">
             <default>process-stop</default>
         </entry>
         <entry name="command" type="string">

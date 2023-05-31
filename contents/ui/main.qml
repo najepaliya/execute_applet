@@ -8,7 +8,8 @@ Item {
     property bool busy: false 
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
     // Plasmoid.fullRepresentation: null
-    Plasmoid.icon: busy ? plasmoid.configuration.stopIcon : plasmoid.configuration.runIcon
+    Plasmoid.icon: busy ? plasmoid.configuration.busyIcon : plasmoid.configuration.runIcon
+    Plasmoid.onActivated: execCommand ()
 
     PlasmaCore.DataSource {
 		id: executable
@@ -38,18 +39,19 @@ Item {
     }
 
     Plasmoid.compactRepresentation: MouseArea {
+        id: ma
         PlasmaCore.IconItem {
             id: buttonIcon
-            // visible: plasmoid.configuration.show == 0 || plasmoid.configuration.show == 2 ? true : false
             height: parent.height
             width: parent.height
             source: plasmoid.icon
-            // active: parent.containsMouse || compactDragArea.containsDrag
-            // smooth: true
         }
         onClicked: {
-            widget.busy = true;
-            executable.exec (plasmoid.configuration.command)
+            execCommand()
         }
+    }
+    function execCommand () {
+        widget.busy = true;
+        executable.exec (plasmoid.configuration.command)
     }
 }

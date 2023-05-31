@@ -8,7 +8,7 @@ Item {
     height: childrenRect.height
 
     property alias cfg_runIcon: runIcon.value
-    property alias cfg_stopIcon: stopIcon.value
+    property alias cfg_busyIcon: busyIcon.value
     property alias cfg_command: labelText.text
 
     Kirigami.FormLayout {
@@ -20,8 +20,8 @@ Item {
             Kirigami.FormData.label: i18nd("plasma_applet_org.kde.plasma.kickoff", "Run Icon:")
         }
         ConfigIcon {
-            id: stopIcon
-            Kirigami.FormData.label: i18nd("plasma_applet_org.kde.plasma.kickoff", "Stop Icon:")
+            id: busyIcon
+            Kirigami.FormData.label: i18nd("plasma_applet_org.kde.plasma.kickoff", "Busy Icon:")
         }
         QQC2.TextField {
             id: labelText
