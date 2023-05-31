@@ -1,5 +1,6 @@
 # execute_applet
 - an applet to execute a configurable command
+- easiest way to install is on the [KDE Store](https://store.kde.org/p/2044766)
 ![configuration](https://github.com/najepaliya/execute_applet/assets/133005733/69602a16-46fe-4c75-8a1d-c83998c17c70)
 
 # features
