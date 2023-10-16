@@ -18,9 +18,3 @@
 - Command: qdbus org.kde.kglobalaccel /component/kwin invokeShortcut Overview
 
 https://github.com/najepaliya/execute_applet/assets/133005733/138d2ef2-6d04-4a1d-9bac-be3b3f1d7076
-
-## complex, multiline commands: JSON parser project windows
-- Command: \<path-to-script\>
-
-https://github.com/najepaliya/execute_applet/assets/133005733/adad7448-176d-4738-a840-5bf56db8c103
-
